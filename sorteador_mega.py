@@ -51,6 +51,11 @@ def ajustar_janela_ao_conteudo(root):
 # Main da Janela
 janela_principal = tk.Tk()
 
+# Definindo a cor da janela principal
+cor_fundo = '#0602e6' #bg=
+cor_letra = 'white' #fg=
+janela_principal.config(bg=cor_fundo)
+
 # Fontes personalizadas
 fonte_titulo = Font(family="Segoe UI", size=15, weight="bold")
 fonte_numeros = Font(family="Segoe UI", size=23, weight="bold")
@@ -59,14 +64,14 @@ fonte_numeros = Font(family="Segoe UI", size=23, weight="bold")
 janela_principal.title('Sorteador da Mega da Virada')
 
 # label titulo
-label_titulo = tk.Label(janela_principal, text='Mega da Virada', font=fonte_titulo).pack(pady=5)
+label_titulo = tk.Label(janela_principal, text='Mega da Virada', font=fonte_titulo, bg=cor_fundo, fg=cor_letra).pack(pady=5)
 
 # label dos números
-label_numeros_sortidos = tk.Label(janela_principal,text='',font=fonte_numeros)
+label_numeros_sortidos = tk.Label(janela_principal,text='',font=fonte_numeros, bg=cor_fundo, fg=cor_letra)
 label_numeros_sortidos.pack(pady=10)
 
 # Botão para chamar a função de gerar os números
-tk.Button(janela_principal, text='Sortear', font=fonte_titulo, command=lambda: escolher_numeros(numeros)).pack(pady=10)
+tk.Button(janela_principal, text='Sortear', font=fonte_titulo, command=lambda: escolher_numeros(numeros), bg='#1404c7', fg=cor_letra).pack(pady=8)
 
 ajustar_janela_ao_conteudo(janela_principal)
 janela_principal.mainloop()

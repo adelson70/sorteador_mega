@@ -45,7 +45,7 @@ def ajustar_janela_ao_conteudo(root):
     y_pos = (altura_tela - altura) // 2
 
     # Define a geometria da janela
-    root.geometry(f"{largura+190}x{altura}+{x_pos-120}+{y_pos-120}")
+    root.geometry(f"{largura+166}x{altura}+{x_pos-50}+{y_pos-120}")
 
 # Main da Janela
 janela_principal = tk.Tk()

@@ -6,7 +6,6 @@ from random import sample
 # Números que podem ser sorteados
 numeros = [n for n in range(1,61)]
 
-
 #  Função para escolher os números
 def escolher_numeros(data):
     lista_numeros_sortidos = sample(data,6)
@@ -19,8 +18,6 @@ def escolher_numeros(data):
 
         str_numeros_sortidos += f"  {n}"
 
-    #print(type(str_numeros_sortidos))
-
     atualizar_label(str_numeros_sortidos)
 
 # Função para atualizar a label dos números sortidos que ira aparecer na GUI
@@ -29,7 +26,6 @@ def atualizar_label(texto):
 
     label_numeros_sortidos.config(text=texto)
     janela_principal.update
-
 
 # Função para ajustar a janela principal conforme o conteudo que estiver nela
 def ajustar_janela_ao_conteudo(root):
@@ -48,6 +44,7 @@ def ajustar_janela_ao_conteudo(root):
     # Define a geometria da janela
     root.geometry(f"{largura+200}x{altura}+{x_pos-50}+{y_pos-120}")
 
+# Parte principal e funcional da janela
 # Main da Janela
 janela_principal = tk.Tk()
 

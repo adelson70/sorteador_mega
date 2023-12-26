@@ -6,13 +6,27 @@ from random import sample
 
 numeros = [n for n in range(1,61)]
 
-# Função para escolher os números
+
+#  Função para escolher os números
 def escolher_numeros(data):
-    ...
+    lista_numeros_sortidos = sample(data,6)
+    str_numeros_sortidos = ""
 
+    for n in lista_numeros_sortidos:
+        n = str(n)
 
-def atualizar_label(label, texto):
-    ...
+        str_numeros_sortidos += f" {n}"
+
+    #print(type(str_numeros_sortidos))
+
+    atualizar_label(str_numeros_sortidos)
+
+# Função para atualizar a label dos números sortidos que ira aparecer na GUI
+def atualizar_label(texto):
+    global label_numeros_sortidos
+
+    label_numeros_sortidos.config(text=texto)
+    janela_principal.update
 
 
 # Função para ajustar a janela principal conforme o conteudo que estiver nela
@@ -30,14 +44,14 @@ def ajustar_janela_ao_conteudo(root):
     y_pos = (altura_tela - altura) // 2
 
     # Define a geometria da janela
-    root.geometry(f"{largura+280}x{altura}+{x_pos-120}+{y_pos-120}")
+    root.geometry(f"{largura+230}x{altura}+{x_pos-120}+{y_pos-120}")
 
 # Main da Janela
 janela_principal = tk.Tk()
 
 # Fontes personalizadas
 fonte_titulo = Font(family="Segoe UI", size=15, weight="bold")
-fonte_numeros = Font(family="Segoe UI", size=13, weight="bold")
+fonte_numeros = Font(family="Segoe UI", size=20, weight="bold")
 
 # Titulo da Janela Principal
 janela_principal.title('Sorteador da Mega da Virada')
@@ -46,7 +60,8 @@ janela_principal.title('Sorteador da Mega da Virada')
 label_titulo = tk.Label(janela_principal, text='Mega da Virada', font=fonte_titulo).pack(pady=5)
 
 # label dos números
-label_numeros_sortidos = tk.Label(janela_principal,text='',font=fonte_numeros).pack(pady=10)
+label_numeros_sortidos = tk.Label(janela_principal,text='',font=fonte_numeros)
+label_numeros_sortidos.pack(pady=10)
 
 # Botão para chamar a função de gerar os números
 tk.Button(janela_principal, text='Gerar Números', font=fonte_titulo, command=lambda: escolher_numeros(numeros)).pack(pady=10)

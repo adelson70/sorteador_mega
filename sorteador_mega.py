@@ -64,7 +64,7 @@ label_numeros_sortidos = tk.Label(janela_principal,text='',font=fonte_numeros)
 label_numeros_sortidos.pack(pady=10)
 
 # Botão para chamar a função de gerar os números
-tk.Button(janela_principal, text='Gerar Números', font=fonte_titulo, command=lambda: escolher_numeros(numeros)).pack(pady=10)
+tk.Button(janela_principal, text='Sortear', font=fonte_titulo, command=lambda: escolher_numeros(numeros)).pack(pady=10)
 
 ajustar_janela_ao_conteudo(janela_principal)
 janela_principal.mainloop()

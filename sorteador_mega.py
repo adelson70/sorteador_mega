@@ -10,6 +10,7 @@ numeros = [n for n in range(1,61)]
 #  Função para escolher os números
 def escolher_numeros(data):
     lista_numeros_sortidos = sample(data,6)
+    lista_numeros_sortidos.sort(reverse=False)
     str_numeros_sortidos = ""
 
     for n in lista_numeros_sortidos:

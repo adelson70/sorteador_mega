@@ -15,7 +15,7 @@ def escolher_numeros(data):
     for n in lista_numeros_sortidos:
         n = str(n)
 
-        str_numeros_sortidos += f" {n}"
+        str_numeros_sortidos += f"  {n}"
 
     #print(type(str_numeros_sortidos))
 
@@ -44,14 +44,14 @@ def ajustar_janela_ao_conteudo(root):
     y_pos = (altura_tela - altura) // 2
 
     # Define a geometria da janela
-    root.geometry(f"{largura+166}x{altura}+{x_pos-50}+{y_pos-120}")
+    root.geometry(f"{largura+200}x{altura}+{x_pos-50}+{y_pos-120}")
 
 # Main da Janela
 janela_principal = tk.Tk()
 
 # Fontes personalizadas
 fonte_titulo = Font(family="Segoe UI", size=15, weight="bold")
-fonte_numeros = Font(family="Segoe UI", size=20, weight="bold")
+fonte_numeros = Font(family="Segoe UI", size=23, weight="bold")
 
 # Titulo da Janela Principal
 janela_principal.title('Sorteador da Mega da Virada')

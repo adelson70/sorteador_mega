@@ -3,6 +3,7 @@ import tkinter as tk
 from tkinter.font import Font
 from random import sample
 
+# Números que podem ser sorteados
 numeros = [n for n in range(1,61)]
 
 
@@ -12,6 +13,7 @@ def escolher_numeros(data):
     lista_numeros_sortidos.sort(reverse=False)
     str_numeros_sortidos = ""
 
+    # Percorre a lista e converte o numero de inteiro para string e adiciona numa variavel str
     for n in lista_numeros_sortidos:
         n = str(n)
 
